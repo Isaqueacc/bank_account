@@ -12,7 +12,7 @@ public class businessAccount extends account{
         this.loanLimit = loanLimit; // construtor para manipular as variáveis privadas
     }
 
-    public Double getLoanLimit() { //Gayyyyyyyyyyyy
+    public Double getLoanLimit() {
         return loanLimit;
     }
 
