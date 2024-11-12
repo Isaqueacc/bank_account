@@ -12,7 +12,7 @@ public class businessAccount extends account{
         this.loanLimit = loanLimit; // construtor para manipular as variáveis privadas
     }
 
-    public Double getLoanLimit() {
+    public Double getLoanLimit() { //Gayyyyyyyyyyyy
         return loanLimit;
     }
 
@@ -27,5 +27,11 @@ public class businessAccount extends account{
             // estrutura condicional que só deposita a quantia na conta
             // se a quantia de emprestimo for maior ou igual ao limite de credito
         }
+    }
+
+    @Override // super com override sendo possivel chamar a implementação da superclasse usando a palavra super
+    public void whithdraw(double amount) {
+        super.whithdraw(amount);
+        balance -= 2.0;
     }
 }

@@ -5,34 +5,19 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        account acc = new account(1001, "Isaque", 0.0);
-        businessAccount bacc = new businessAccount(1002, "Lis", 0.0, 500.0);
 
-        // UPCASTING
-        account acc1 = bacc; // recebendo o objeto que está na subclasse
-                            // "Bussines Account e coolocando na classe principal account"
+        account acc1 = new account(1001, "ISAQUE", 1000.0);
+        acc1.whithdraw(200);
+        System.out.println(acc1.getBalance());
 
-        account acc2 = new businessAccount(1003," nino", 0.0,200.0);
-        account acc3 = new savingsAccount(1004, "Reinan", 0.0, 0.01);
+        //MEtodo com override
+        account acc2 = new savingsAccount(1002, "LIca", 1000.0, 0.01);
+        acc2.whithdraw(200);
+        System.out.println(acc2.getBalance());
 
-        // Downcasting
-
-        businessAccount acc4 = (businessAccount) acc2;
-        acc4.loan(100.0);// parâmetro que permite fazer o downcasting
-                                // podendo manipular as variaveis e funcôes
-
-        //businessAccount acc5 = (businessAccount) acc3;
-        if (acc3 instanceof businessAccount){
-            businessAccount acc5 = (businessAccount)acc3;
-            acc5.loan(200.00);
-
-            System.out.println("Loan !");
-        }
-        if (acc3 instanceof savingsAccount){
-            savingsAccount acc5 = (savingsAccount) acc3;
-            acc5.updateBalance();
-            System.out.println("Update !");
+        // metodo com super e override
+         account acc3 = new businessAccount(1003,"Nino", 1000.0, 500.0);
+         acc3.whithdraw(200.0);
+        System.out.println(acc3.getBalance());
         }
     }
-
-}
