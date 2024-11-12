@@ -2,19 +2,24 @@ package org.example;
 
 public class account {
 
-    private String number; // numero da conta
-    private String holder; // Titular da conta
+    protected int number; // numero da conta
+    protected String holder; // Titular da conta
     protected Double balance; // Saldo na conta
 
-     public  account (){
+     public  account (Double balance, String holder, Double number){
 
      }
 
-    public String getNumber() {
+    public account() {
+
+    }
+
+
+    public int getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 
@@ -30,7 +35,7 @@ public class account {
         return balance;
     }
 
-    public account(Double balance, String holder, String number) {
+    public account(int number, String holder, Double balance) {
         this.balance = balance;
         this.holder = holder;
         this.number = number;

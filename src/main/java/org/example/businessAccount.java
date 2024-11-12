@@ -7,8 +7,8 @@ public class businessAccount extends account{
         super(); // super sem argumentos para repetir uma certa logica na subclasse
     }
 
-    public businessAccount(Double balance, String holder, String number, Double loanLimit) {
-        super(balance, holder, number);
+    public businessAccount(int number, String holder, Double balance, Double loanLimit) {
+        super(number, holder, balance);
         this.loanLimit = loanLimit; // construtor para manipular as variáveis privadas
     }
 
