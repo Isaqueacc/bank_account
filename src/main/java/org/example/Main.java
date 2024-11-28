@@ -4,20 +4,14 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        account x = new account(1001, "Isaque",1000.0);
+        account y = new savingsAccount(1002,"Lis",1000.0,0.01);
+        x.whithdraw(50.0);
+        y.whithdraw(50.0);
+        // polimorfismo chamando a mesma variável porém de forma diferente
 
+        System.out.println(x.getBalance());
+        System.out.println(y.getBalance());
 
-        account acc1 = new account(1001, "ISAQUE", 1000.0);
-        acc1.whithdraw(200);
-        System.out.println(acc1.getBalance());
-
-        //MEtodo com override
-        account acc2 = new savingsAccount(1002, "LIca", 1000.0, 0.01);
-        acc2.whithdraw(200);
-        System.out.println(acc2.getBalance());
-
-        // metodo com super e override
-         account acc3 = new businessAccount(1003,"Nino", 1000.0, 500.0);
-         acc3.whithdraw(200.0);
-        System.out.println(acc3.getBalance());
         }
     }

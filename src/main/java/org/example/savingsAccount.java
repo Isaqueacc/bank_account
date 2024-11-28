@@ -23,7 +23,7 @@ public void updateBalance(){
         balance += balance * interestrate;
 }
 
-    @Override // metodo para spbrepor um metodo de outra classe
+    @Override // metodo para sobrepor um metodo de outra classe
     public void whithdraw(double amount) {
         balance -= amount;
     }
